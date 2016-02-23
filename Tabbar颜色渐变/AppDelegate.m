@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "ViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    ViewController *news = [[ViewController alloc] init];
+    
+    UINavigationController *newsNav = [[UINavigationController alloc] initWithRootViewController:news];
+    
+    news.title = @"透明渐变色";
+    
+    self.window.rootViewController = newsNav;
+    
+    [self.window makeKeyAndVisible];
+
+    
+    
     return YES;
 }
 
